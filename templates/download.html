@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+
+
+<div class="container-caja1 text-center">
+  <div class="row text-center">
+    <div class="caja2">
+      <img src="{{url.thumbnail_url}}" class="img-fluid" alt="{{url.title}}">
+      <p class="title mt-2">{{ url.title }}</p>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col">  
+      <!--BOTON 1-->
+
+      <!-- Audio Form -->
+      <form method="POST" action="{{ url_for('download_audio') }}">
+        <div class="card-text text-center">
+          <button class="button btn-shadow">
+            <i class="fa-solid fa-music fa-2x"></i>
+           
+        </button>
+        </div>
+      </form></div>
+
+      <!--BOTON 2-->
+
+      <!-- Home form -->
+      <div class="col">
+        <form method="POST" action="{{ url_for('home') }}">
+          <div class="col">
+            <button type="submit" class="button btn-shadow" href="{{url_for('home') }}">
+              <i class="fa-sharp fa-solid fa-house fa-2x"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      
+          
+    <div class="col"> 
+
+      <!-- BOTON 3 -->
+      
+      <!--Video Form-->
+   
+      <form method="POST" action="{{ url_for('download_video') }}">
+                
+        <!-- Download button -->
+          
+          <div class="text-center">
+            <button type="submit" class="button btn-shadow" id="button2" href="{{ url_for('download_video') }}">
+              <i class="fa-sharp fa-solid fa-video fa-2x"></i>              
+            </button>
+          </div>     
+      </form></div>
+
+  </div>
+</div>
+
+
+  
+{% endblock content %}
+
+
+

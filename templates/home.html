@@ -1,0 +1,39 @@
+{% extends 'layout.html' %} 
+
+{% block content %}
+
+
+
+
+<div class="container-caja1 text-center">
+  <div class="row">
+    <div class="caja2">
+      <h2 class="mt-3 text-center title">Descarga</h2>
+      <p class="title">videos, canciones y playlist</p>
+      <i class="fa-solid fa-music fa-6x"></i>
+    </div>
+  </div>
+  <div class="row">
+    
+      <form action="{{ url_for('home') }}" method="POST" autocomplete="off" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div>
+          {{ form.link (class="input btn-shadow", placeholder='Ingrese link..', autocomplete=off)}} 
+          <div class="form text-center">
+            <!-- Convert button -->
+            <button type="submit" class="form-button btn-shadow" href="{{url_for('home') }}">
+              <i class="fa-solid fa-download"></i>
+            </button>  
+
+          </div>
+        </div>
+      </form>
+
+    
+  </div>
+  
+  
+</div>
+
+
+{% endblock content %}

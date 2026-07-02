@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container-caja1 text-center">
+  <div class="row">
+    <div class="caja2">
+      <h2 class="title mb-5">{{ url.title }}</h2>
+      <i class="fa-solid fa-headphones-simple fa-8x"></i>
+    </div>
+  </div>
+  <div class="row">
+    
+    <form method="POST" action="{{ url_for('playlist_download') }}">
+      <div class="">
+        <button class="form-button btn-shadow mb-4" type="submit" href="{{ url_for('playlist_download') }}">
+          Download playlist 
+        </button>
+      </div>
+    </form>    
+  </div>
+  <class="row">
+    
+      <form method="POST" action="{{ url_for('home') }}">
+        <div class="col">
+          <button type="submit" class="button btn-shadow" href="{{url_for('home') }}">
+            <i class="fa-sharp fa-solid fa-house fa-2x"></i>
+          </button>
+        </div>
+      </form>
+    
+  </div>
+  
+  
+</div>
+
+
+
+{% endblock content %}
+
+
+
