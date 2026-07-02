@@ -1,0 +1,90 @@
+
+body {
+    background-color: #000000;
+}
+
+.container-caja1{
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000 0%, #333333 50%, #d4d3d3 100%);
+    margin: 1rem auto;
+    margin-bottom: 40px;
+    box-shadow: 10px 10px 25px rgba(87, 87, 87, 0.3);
+    border-radius: 10%;
+}
+
+
+
+/* Botones */
+
+.button {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 4rem;
+    height: 4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5rem;
+}
+
+
+.caja2{
+    width: 250px;
+    height: 250px;
+    margin: 30px auto; /* para poder centrar la caja utilice text-center en row y margin */
+}
+/* Media queries, empieza con esta configuracion */
+.container-caja1 {
+    width: 80%; 
+    height: 450px;
+  }
+  
+  /* esta media querie indica que cuando se llegue a esta medida cambiara la configuracion   */
+  @media (min-width: 450px) {
+    .container-caja1 {
+      /* Estilos para pantallas de tamaño tablet o superior */
+      max-width: 400px; /* Limitar el ancho máximo de la caja padre */
+      min-height: 70%;
+    }
+  }
+
+.title{
+    color: white;
+}
+  
+.btn-shadow{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transform: perspective(5px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+.btn-shadow:hover {
+    box-shadow: 0 10px 15px rgba(150, 148, 148, 0.5);
+    transform: perspective(5px);
+  }
+
+
+i {
+    color: rgb(255, 140, 58);
+}
+
+
+.input {
+    padding: 0.5em;
+    margin: 0.5em;
+    color: #555;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 1.5rem;
+    width: 90%;
+  }
+
+
+
+  
+  .form-button {
+
+    padding: 0.5em 1em;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+  }
